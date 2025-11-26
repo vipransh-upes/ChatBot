@@ -1,0 +1,8 @@
+PROJECT REPORT
+------------------------------------------------------------
+Course Code: CSEG1032
+Course Title: Programming in C
+Project Title: Chatbot
+Student Name : Vipransh Sharma 
+Sap Id : 590022121
+Semester: 1st sem (2025)
