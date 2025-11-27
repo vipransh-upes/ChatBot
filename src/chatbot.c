@@ -8,7 +8,7 @@
 void chatbot_loop(char *naam) {
     char msg[200];
     int i;
-    srand(time(NULL));  // ✅ Add this here
+    srand(time(NULL));  
 
     printf("Bot: Nice to meet you %s\n", naam);
     printf("Bot: Type help for commands\n\n");
