@@ -7,7 +7,7 @@ int main() {
     char naam[50];
     int i;
 
-    // srand removed - now in chatbot.c
+    
     clrscr();
     printf("Bot: Hello user :)\n");
     printf("Bot: What is your name?\n");
