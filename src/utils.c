@@ -2,5 +2,5 @@
 #include "utils.h"
 
 void clrscr(void) {
-    system("cls");  // Windows;
+    system("clear");  // Windows;
 }
