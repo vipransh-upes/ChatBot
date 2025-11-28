@@ -5,60 +5,58 @@ Course Title: Programming in C
 Project Title: Chatbot
 Student Name : Vipransh Sharma 
 Sap Id : 590022121
-Semester: 1st sem (2025)
+Semester: 1st (2025)
 
 
 
 
-Here is a concise report for your C chatbot program. You can copy it into Word and adjust formatting as needed.
-
-Title Page  
+Title Page: 
 - Title: Simple Console-based Chatbot in C  
-- Course: (Your course name)  
-- Submitted by: (Your name, roll number)  
-- Submitted to: (Faculty name)  
-- Date: (Submission date)
+- Course: Programming in C (CSEG1041)  
+- Submitted by: Vipransh Sharma, SAP: 590022121
+- Submitted to: Dr. Tanu Singh   
+- Date: 30th November, 2025
 
-Abstract  
-This project implements a simple rule-based chatbot in C that interacts with the user through the console. The chatbot greets the user, asks for their name, and responds to a predefined set of commands such as greetings, time query, facts, jokes, and motivational messages. Randomization is used to vary responses for a more natural feel. The system demonstrates basic concepts of C programming, including input/output handling, string processing, conditional statements, loops, and use of standard libraries.
+Abstract:
+This project implementes a simple rule-based chatbot in C that interacts with the user through the console. The chatbot greets the user, asks for their name, and responds to a predefined set of commands such as greetings, time query, facts, jokes, and motivational messages. Randomization is used to vary responses for a more natural feel. The system demonstrates basic concepts of C programming, including input/output handling, string processing, conditonal statements, loops, and use of standardd libraries.
 
-Problem Definition  
+Problem Definition:  
 The objective of this project is to design and implement a basic text-based chatbot that can simulate a simple conversation with a user on the command line. The chatbot should:  
-- Accept the user’s name and personalize some responses.  
+- Accept the user’s name and personalise some responses.  
 - Recognize a fixed set of commands (e.g., “hi”, “how are you”, “time”, “joke”, “bye”) and produce appropriate replies.  
 - Provide random variations for some responses to avoid repetitive output.  
 - Run continuously in a loop until the user chooses to exit with the “bye” command.  
 
-System Design (Flowcharts, Algorithms)  
+System Design (Flowcharts, Algorithms):  
 
-1) Overall algorithm (high level)  
+1) Algorithm: 
 - Start program.  
 - Initialize random number generator using current time.  
 - Clear the screen and greet the user.  
-- Ask for and read the user’s name, then remove the trailing newline.  
+- Ask for and read the user’s name, then remov the trailing newline.  
 - Show command hint (“Type help for commands”).  
-- Enter an infinite loop:  
+- Enter an infnite loop:  
   - Prompt “You: ” and read a line of user input into msg.  
-  - Remove the trailing newline from msg.  
-  - Clear the screen.  
-  - Compare msg with known commands using string comparison:  
+  - Remove the trailling newline from msg.  
+  -  Clear the screen.  
+  - Compare msg with known commands using string comparision:  
     - If greeting (“hi” / “hello”): generate a random number and print one of several greeting replies.  
     - If “how are you”: generate a random reply about bot status.  
-    - If “time”: get current system time and display it.  
+    -  If “time”: get current system time and display it.  
     - If “tell me a fact”: choose one of several predefined facts at random.  
     - If “motivate me”: choose one of several motivational lines at random.  
     - If “love you bot”: print a personalized friendly reply using the user’s name.  
     - If “joke”: choose one of several humorous replies at random.  
-    - If “help”: print the list of supported commands.  
+    -  If “help”: print the list of supported commands.  
     - If “bye”: print a goodbye message with the user’s name and break the loop.  
-    - Else: print a generic “don’t understand / error” style message, chosen randomly.  
+    -  Else: print a generic “don’t understand / error” style message, chosen randomly.  
 - End program.
 
-2) Flowchart (text description)  
+2) Flowchart:  
 - Start → Initialize random seed → Clear screen → Ask name → Read name → Remove newline → Clear screen → Show welcome + help hint → Loop:  
   - Input msg → Remove newline → Clear screen → Sequence of decision blocks checking msg against commands → Execute corresponding output action → If msg == “bye” then Exit loop → End.
 
-Implementation Details (with snippets)  
+Implementation Details (with snippets):  
 
 1) Header files and clear screen  
 - stdio.h for input/output.  
@@ -68,12 +66,12 @@ Implementation Details (with snippets)
 - A helper function clrscr() calls system("cls") to clear the console on Windows systems.
 
 2) Name handling  
-- A character array naam stores the user’s name.  
+- A character arrray naam stores the user’s name.  
 - fgets is used to safely read the name from stdin.  
-- A loop scans for the newline character '\n' and replaces it with '\0' to make a clean C string.  
+- A loop scans for the newline character '\n' and replaves it with '\0' to make a clean C string.  
 - The name is later used in personalized responses like “Nice to meet you <name>” and the goodbye message.
 
-3) Message handling and main loop  
+3) Messege handling and main loop  
 - msg stores each user message.  
 - Inside while(1), the program:  
   - Prints “You: ” and reads input using fgets.  
@@ -83,7 +81,7 @@ Implementation Details (with snippets)
 - For the “time” command, time_t and ctime are used to obtain and print the current system time as a human-readable string.  
 - For “bye”, the loop breaks, and main returns 0.
 
-Testing & Results  
+Testing & Results:  
 
 1) Test cases  
 - Input: Name “Aman”, then “hi” → Output: One of the greeting messages including “Bot: Hello bro :)” or similar; shows the chatbot greets properly with random variation.  
@@ -102,17 +100,17 @@ Testing & Results
 - Commands are strictly case-sensitive; only exact lowercase strings match.  
 - The screen is cleared after each input on Windows, giving a clean chat-like interface.
 
-Conclusion & Future Work  
+Conclusion & Future Work:  
 
-Conclusion  
+Conclusion: 
 The project successfully demonstrates a basic console-based chatbot using C. The chatbot can recognize several predefined user commands, generate dynamic responses using randomization, display system time, and maintain a simple interactive conversation loop. It illustrates core programming concepts such as loops, conditional branching, string handling, use of standard libraries, and basic user interface design in a text console.
 
-Future Work  
+Future Work:  
 - Add case-insensitive input handling so that commands like “Hi” or “HELLO” are accepted.  
 - Expand the command set with more conversation topics and richer responses.  
 - Replace system("cls") with a more portable or library-based screen-handling method to support non-Windows platforms.  
 - Store responses and commands in external files or data structures for easier modification.  
 - Implement pattern matching or simple NLP techniques to handle more flexible user inputs instead of only fixed commands.
 
-References  
+References:  
 - Your class lecture notes and lab instructions.  
