@@ -31,3 +31,7 @@ How It Works:
 5. Typing "bye" ends the conversation.
 
 
+
+Execution: 
+gcc -I include src/main.c src/chatbot.c src/utils.c -o main
+./main
