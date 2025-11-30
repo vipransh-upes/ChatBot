@@ -113,4 +113,6 @@ Future Work:
 - Implement pattern matching or simple NLP techniques to handle more flexible user inputs instead of only fixed commands.
 
 References:  
-- Your class lecture notes and lab instructions.  
+- Class notes by Dr. Tanu Singh.
+- Let Us C. 
+- GeeksforGeeks. 
